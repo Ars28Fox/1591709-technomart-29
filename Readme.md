@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Арсений](https://up.htmlacademy.ru/htmlcss/29/user/1591709).
-* Наставник: `Неизвестно`.
+* Студент: [Арсений Лисин](https://up.htmlacademy.ru/htmlcss/29/user/1591709).
+* Наставник: [Ольга Тюлихова](https://htmlacademy.ru/profile/id523263).
 
 ---
 
