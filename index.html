@@ -28,7 +28,7 @@
             </a>
           </div>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <label for="search__input"></label>
+            <label class="visually-hidden" for="search__input">Поисковая строка</label>
             <input class="search-form__input" type="search" name="search" id="search__input" placeholder="Поиск:"
               required>
             <svg class="search-form__icon" width="17" height="17" fill="#fff" xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,6 @@
       </div>
 
     </div>
-
 
     <div class="header__content header__content--bg">
 
@@ -68,7 +67,7 @@
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             </address>
           </div>
-          <div class="header__ui-group header__ui-group--active">
+          <div class="header__ui-group">
             <a class="header__ui-buttons header__login-link" href="#" aria-label="Войти в личный кабинет">
               <svg class="header__icons header__login-icon" width="21" height="17" fill="#C5C5C5"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -80,34 +79,12 @@
             </a>
             <a class="header__ui-buttons header__reg-link" href="#">Регистрация</a>
           </div>
-          <div class="header__ui-group">
-            <a class="header__ui-buttons header__user-link" href="#">
-              <svg class="header__icons header__user-icon" width="20" height="18" fill="#C5C5C5"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path
-                  d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" />
-              </svg>
-              <span class="visually-hidden">Аккаунт с именем:</span>
-              Равшан Джамшутович</a>
-            <a class="header__ui-buttons header__logout-link" href="#" aria-label="Выйти из аккаунта">
-              <svg class="header__icons header__logout-icon" width="20" height="17" fill="#C5C5C5"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" />
-                <path
-                  d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" />
-              </svg>
-            </a>
-            <div class="header__ui-subgroup">
-              <a class="header__ui-sublink" href="#">Мои заказы</a>
-              <a class="header__ui-sublink" href="#">Личный кабинет</a>
-            </div>
-          </div>
         </div>
 
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link nav__link--disabled" tabindex="0" aria-label="Открытая вкладка - главная">Главная</a>
+              <a class="nav__link nav__link--disabled" tabindex="0">Главная</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Компания</a>
@@ -191,7 +168,8 @@
                 <h4 class="slider__title">Перфораторы</h4>
                 <p class="slider__text">Настоящие мужские игрушки</p>
               </div>
-              <a class="main-buttons slider__catalog-link" href="catalog.html" aria-label="Слайдер - кнопка Открыть каталог с перфораторами">
+              <a class="main-buttons slider__catalog-link" href="catalog.html"
+                aria-label="Слайдер - кнопка Открыть каталог с перфораторами">
                 Открыть каталог
               </a>
             </div>
@@ -203,7 +181,8 @@
                 <h4 class="slider__title">Дрели</h4>
                 <p class="slider__text">Соседям на радость!</p>
               </div>
-              <a class="main-buttons slider__catalog-link" href="catalog.html" tabindex="-1" aria-label="Слайдер - кнопка Открыть каталог с дрелями">
+              <a class="main-buttons slider__catalog-link" href="catalog.html" tabindex="-1"
+                aria-label="Слайдер - кнопка Открыть каталог с дрелями">
                 Открыть каталог
               </a>
             </div>
@@ -247,8 +226,10 @@
           <span class="visually-hidden">Текущая цена</span>
           <span class="product-item__price product-item__price-main">25500 р.</span>
           <div class="product-item__actions-wrap">
-            <button class="product-item__actions-button product-item__actions-button-buy" type="button" aria-label="Добавить перфоратор в корзину">Купить</button>
-            <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button" aria-label="Добавить перфоратор в закладки">В закладки</button>
+            <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+              aria-label="Добавить перфоратор в корзину">Купить</a>
+            <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+              aria-label="Добавить перфоратор в закладки">В закладки</a>
           </div>
         </article>
 
@@ -267,8 +248,10 @@
           <span class="visually-hidden">Текущая цена</span>
           <span class="product-item__price product-item__price-main">15500 р.</span>
           <div class="product-item__actions-wrap">
-            <button class="product-item__actions-button product-item__actions-button-buy" type="button" aria-label="Добавить перфоратор в корзину">Купить</button>
-            <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button" aria-label="Добавить перфоратор в закладки">В закладки</button>
+            <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+              aria-label="Добавить перфоратор в корзину">Купить</a>
+            <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+              aria-label="Добавить перфоратор в закладки">В закладки</a>
           </div>
         </article>
 
@@ -287,8 +270,10 @@
           <span class="visually-hidden">Текущая цена</span>
           <span class="product-item__price product-item__price-main">25500 р.</span>
           <div class="product-item__actions-wrap">
-            <button class="product-item__actions-button product-item__actions-button-buy" type="button" aria-label="Добавить перфоратор в корзину">Купить</button>
-            <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button" aria-label="Добавить перфоратор в закладки">В закладки</button>
+            <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+              aria-label="Добавить перфоратор в корзину">Купить</a>
+            <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+              aria-label="Добавить перфоратор в закладки">В закладки</a>
           </div>
         </article>
 
@@ -305,10 +290,11 @@
           <span class="visually-hidden">Текущая цена</span>
           <span class="product-item__price product-item__price-main">12500 р.</span>
           <div class="product-item__actions-wrap">
-            <button class="product-item__actions-button product-item__actions-button-buy" type="button" aria-label="Добавить перфоратор в корзину">Купить</button>
-            <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button" aria-label="Добавить перфоратор в закладки">В закладки</button>
+            <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+              aria-label="Добавить перфоратор в корзину">Купить</a>
+            <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+              aria-label="Добавить перфоратор в закладки">В закладки</a>
           </div>
-        </article>
 
       </section>
 
@@ -374,12 +360,15 @@
           Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
+
         <div class="services__content">
+
           <div class="tab__list">
             <a class="tab__button tab__button--active" data-tab="#tab-1" href="#">Доставка</a>
             <a class="tab__button" data-tab="#tab-2" href="#">Гарантия</a>
             <a class="tab__button" data-tab="#tab-3" href="#">Кредит</a>
           </div>
+
           <div class="tab__item tab__item-delivery tab__item--active" id="tab-1">
             <h3 class="tab__item-title">Доставка</h3>
             <p class="tab__item-text">
@@ -389,6 +378,7 @@
               поднимая его на ваш этаж!
             </p>
           </div>
+
           <div class="tab__item tab__item-guarantee" id="tab-2">
             <h3 class="tab__item-title">Гарантия</h3>
             <p class="tab__item-text">
@@ -399,6 +389,7 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </div>
+
           <div class="tab__item tab__item-credit" id="tab-3">
             <h3 class="tab__item-title">Кредит</h3>
             <p class="tab__item-text">
@@ -410,7 +401,9 @@
               <span class="visually-hidden">На кредит</span>
             </a>
           </div>
+
         </div>
+
       </div>
 
     </section>
@@ -420,12 +413,14 @@
       <div class="page-main__2cols">
 
         <section class="about-company">
+
           <h2 class="section-title about-company__title">Компания «Техномарт»</h2>
           <p class="about-company__subtitle">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
             ремонта и строительства не оставит равнодушными любителей сэкономить на
             гастарбайтерах.
           </p>
+
           <p class="about-company__coop-text">
             Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
@@ -436,18 +431,22 @@
             <li class="about-company__coop-item">ЖелДорЭкспедиция</li>
           </ul>
           <a class="main-buttons about-company__button" href="#">Подробнее о компании</a>
+
         </section>
 
         <section class="contacts">
+
           <h2 class="section-title contacts__title">Контакты</h2>
           <p class="contacts__text">
             Вы можете забрать товар сами, заехав в наш офис:
           </p>
+
           <a class="contacts__map" href="https://yandex.ru/maps/-/CKesyWml" target="_blank">
             <img class="contacts__map-img" src="img/adress-map.png" width="300" height="158"
               alt="Карта офиса по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19">
           </a>
           <a class="main-buttons contacts__lost-link" href="#">Заблудились? Напишите нам!</a>
+
         </section>
 
       </div>
@@ -463,14 +462,12 @@
       <div class="container">
 
         <div class="footer__content-top">
-
           <div class="logo">
             <a class="logo__link logo__link--big">
               <img class="logo__img logo__img--big" src="img/logo-technomart.svg" alt="Логотип магазина Техномарт"
                 width="108" height="18">
             </a>
           </div>
-
           <ul class="footer__nav-top">
             <li class="footer__nav-item">
               <a class="footer__top-link" href="#">Компания</a>
@@ -492,7 +489,6 @@
         </div>
 
         <div class="footer__content-bottom">
-
           <ul class="footer__nav-bottom">
             <li class="footer__nav-item">
               <a class="footer__bottom-link" href="#">Материалы</a>
@@ -507,7 +503,6 @@
               <a class="footer__bottom-link" href="#">Спецпредложения</a>
             </li>
           </ul>
-
           <address class="footer__address">
             <span class="visually-hidden">Адрес магазина:</span>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -528,11 +523,11 @@
       <div class="container">
 
         <div class="footer__bottom-wrap">
-
           <p class="copyright">
             © 2010–2019 Компания «Техномарт»
             Все права защищены
           </p>
+
           <ul class="footer__social-list" aria-label="Социальные сети">
             <li>
               <a class="footer__social-button" href="#">
@@ -565,17 +560,19 @@
                 </svg>
               </a>
             </li>
-
           </ul>
+
           <p class="footer__email">
             Обратная связь:
-            <a class="footer__feedback-link" href="mailto:mail@htmlacademy.ru" aria-label="Обратная связь - email: mail@htmlacademy.ru">
+            <a class="footer__feedback-link" href="mailto:mail@htmlacademy.ru"
+              aria-label="Обратная связь - email: mail@htmlacademy.ru">
               mail@htmlacademy.ru
             </a>
           </p>
           <p class="footer__design-by">
             Разработано &mdash;
-            <a class="footer__feedback-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработано: htmlacademy.ru">
+            <a class="footer__feedback-link" href="https://htmlacademy.ru/intensive/htmlcss"
+              aria-label="Разработано: htmlacademy.ru">
               htmlacademy.ru
             </a>
           </p>
@@ -589,45 +586,64 @@
   </footer>
 
   <section class="modal modal-lost">
+
     <h2 class="visually-hidden">Заблудились? Напишите нам</h2>
+
     <form class="modal-lost__form" method="POST" action="https://echo.htmlacademy.ru" id="lost-form">
+
       <div class="modal-lost__field-wrap">
         <label class="modal-lost__field-title" for="fullname-field">Ваше имя:</label>
         <input class="modal-lost__field-text" type="text" name="fullname" id="fullname-field" placeholder="Имя Фамилия">
       </div>
+
       <div class="modal-lost__field-wrap">
         <label class="modal-lost__field-title" for="email-field">Ваш e-mail:</label>
         <input class="modal-lost__field-text" type="email" name="email" id="email-field"
           placeholder="email@example.com">
       </div>
+
       <div class="modal-lost__field-wrap modal-lost__field-wrap--2col">
         <label class="modal-lost__field-title" for="message-field">Текст письма:</label>
         <textarea class="modal-lost__field-text modal-lost__field-textarea" name="letter-message" id="message-field"
           placeholder="В свободной форме"></textarea>
       </div>
+
     </form>
+
     <div class="modal__submit-wrap">
       <button class="main-buttons modal-lost__submit" type="submit" form="lost-form">Отправить</button>
     </div>
+
     <button class="modal__close" type="button" aria-label="Закрыть"></button>
+
   </section>
 
   <section class="modal modal-map">
+
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <div class="modal-map__tab-trap" tabindex="0" aria-label="Модальное окно с картой"></div>
+
+    <div class="modal-map__tab-trap" tabindex="0" aria-label="Модальное окно с картой">
+    </div>
+
     <iframe src="https://yandex.ru/map-widget/v1/-/CCQ~fMvatB" width="943" height="441" allowfullscreen
       title="Карта офиса по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
     </iframe>
+
     <button class="modal__close" type="button" aria-label="Закрыть карту"></button>
+
   </section>
 
   <section class="modal modal-buy">
+
     <h2 class="modal-buy__title">Товар добавлен в корзину!</h2>
+
     <div class="modal__submit-wrap">
       <a class="main-buttons modal-buy__order-link" href="#">Оформить заказ</a>
       <button class="main-buttons modal-buy__shop-link" type="button">Продолжить покупки</button>
     </div>
+
     <button class="modal__close" type="button" aria-label="Закрыть"></button>
+
   </section>
 
   <script src="js/slider.js"></script>
@@ -635,6 +651,7 @@
   <script src="js/tabs.js"></script>
   <script src="js/modal-map.js"></script>
   <script src="js/modal-lost.js"></script>
+
 </body>
 
 </html>

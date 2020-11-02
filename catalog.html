@@ -27,7 +27,7 @@
             </a>
           </div>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <label for="search__input"></label>
+            <label class="visually-hidden" for="search__input">Поисковая строка</label>
             <input class="search-form__input" type="search" name="search" id="search__input" placeholder="Поиск:"
               required>
             <svg class="search-form__icon" width="17" height="17" fill="#fff" xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,6 @@
       </div>
 
     </div>
-
 
     <div class="header__content header__content--bg">
 
@@ -67,18 +66,6 @@
             </address>
           </div>
           <div class="header__ui-group">
-            <a class="header__ui-buttons header__login-link" href="#">
-              <svg class="header__icons header__login-icon" width="21" height="17" fill="#C5C5C5"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M14.88 8.5L6 0v6H0v5h6v6l8.88-8.5z" />
-                <path
-                  d="M16.99 15.01h-5.03V17h5.03c2.17 0 3-1.81 3.03-3.03V3.03C19.98 1.8 19.16 0 16.98 0h-5.03v1.99h5.03c.84 0 .99.68 1 1.06v10.9c-.01.38-.16 1.06-1 1.06z" />
-              </svg>
-              Войти
-            </a>
-            <a class="header__ui-buttons header__reg-link" href="#">Регистрация</a>
-          </div>
-          <div class="header__ui-group header__ui-group--active">
             <a class="header__ui-buttons header__user-link" href="#">
               <svg class="header__icons header__user-icon" width="20" height="18" fill="#C5C5C5"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -111,7 +98,7 @@
               <a class="nav__link" href="#">Компания</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--disabled" aria-label="Открытая вкладка - каталог" tabindex="0">Каталог</a>
+              <a class="nav__link nav__link--disabled" tabindex="0">Каталог</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Новости</a>
@@ -156,7 +143,7 @@
           <a class="breadcrumbs__link" href="#">Инструмент</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" aria-label="Открытый раздел каталога - Перфораторы" tabindex="0">Перфораторы</a>
+          <a class="breadcrumbs__link" tabindex="0">Перфораторы</a>
         </li>
       </ul>
 
@@ -167,23 +154,24 @@
         </h1>
 
         <div class="filter catalog__filter">
+
           <h2 class="filter__title filter__title--bg">Фильтр:</h2>
 
           <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
 
             <fieldset class="filter__item">
-
               <legend>
                 <h3 class="filter__item-title">Цена:</h3>
               </legend>
 
               <div class="range filter__range">
+
                 <div class="range__controls">
                   <div class="range__scale">
                     <div class="range__bar"></div>
                   </div>
-                  <div class="range__toggle range__toggle--min"></div>
-                  <div class="range__toggle range__toggle--max"></div>
+                  <div class="range__toggle range__toggle--min" tabindex="0" aria-label="Левый ползунок"></div>
+                  <div class="range__toggle range__toggle--max" tabindex="0" aria-label="Правый ползунок"></div>
                 </div>
 
                 <div class="range__price">
@@ -195,72 +183,59 @@
                     <input class="range__price-input" type="number" name="max-price" value="30000">
                   </label>
                 </div>
+
               </div>
 
             </fieldset>
 
             <fieldset class="filter__item">
-
               <legend>
                 <h3 class="filter__item-title">Производители:</h3>
               </legend>
 
               <div class="vendors filter__vendors">
-                <label class="check">
-                  <input class="check__input" type="checkbox" name="Bosch" checked>
-                  <span class="check__custom"></span>
-                  <span class="vendors__name">Bosch</span>
-                </label>
-                <label class="check">
-                  <input class="check__input" type="checkbox" name="Interskol">
-                  <span class="check__custom"></span>
-                  <span class="vendors__name">Интерскол</span>
-                </label>
-                <label class="check">
-                  <input class="check__input" type="checkbox" name="Makita" checked>
-                  <span class="check__custom"></span>
-                  <span class="vendors__name">Makita</span>
-                </label>
-                <label class="check">
-                  <input class="check__input" type="checkbox" name="Dewalt">
-                  <span class="check__custom"></span>
-                  <span class="vendors__name">Dewalt</span>
-                </label>
-                <label class="check">
-                  <input class="check__input" type="checkbox" name="Hitachi">
-                  <span class="check__custom"></span>
-                  <span class="vendors__name">Hitachi</span>
-                </label>
-              </div>
+                <input class="visually-hidden checkbox__input" id="checkbox-1" type="checkbox" name="Bosch" checked>
+                <label class="checkbox" for="checkbox-1">Bosch</label>
 
+                <input class="visually-hidden checkbox__input" id="checkbox-2" type="checkbox" name="Interskol">
+                <label class="checkbox" for="checkbox-2">Интерскол</label>
+
+                <input class="visually-hidden checkbox__input" id="checkbox-3" type="checkbox" name="Makita" checked>
+                <label class="checkbox" for="checkbox-3">Makita</label>
+
+                <input class="visually-hidden checkbox__input" id="checkbox-4" type="checkbox" name="Dewalt">
+                <label class="checkbox" for="checkbox-4">Dewalt</label>
+
+                <input class="visually-hidden checkbox__input" id="checkbox-5" type="checkbox" name="Hitachi">
+                <label class="checkbox" for="checkbox-5">Hitachi</label>
+              </div>
             </fieldset>
 
             <fieldset class="filter__item">
-
               <legend>
                 <h3 class="filter__item-title">Питание:</h3>
               </legend>
 
               <div class="power filter__power">
-                <label class="radio">
-                  <input class="radio__input" type="radio" name="type-of-power" value="battery" checked>
-                  <span class="radio__custom"></span>
-                  <span class="power__name">Аккумуляторные</span>
-                </label>
-                <label class="check">
-                  <input class="radio__input" type="radio" name="type-of-power" value="network">
-                  <span class="radio__custom"></span>
-                  <span class="power__name">Сетевые</span>
-                </label>
+                <input class="radio__input visually-hidden" id="radio-1" type="radio" name="type-of-power" value="battery" checked>
+                <label class="radio" for="radio-1">Аккумуляторные</label>
+
+                <input class="radio__input visually-hidden" id="radio-2" type="radio" name="type-of-power" value="network">
+                <label class="radio" for="radio-2">Сетевые</label>
               </div>
             </fieldset>
+
             <button class="main-buttons filter__submit"
               aria-label="Сделать фильтр товаров по выбранным категориям">Показать</button>
+
           </form>
+
         </div>
 
         <div class="sort catalog__sort">
+
           <h2 class="sort__title">Сортировка:</h2>
+
           <div class="sort__buttons">
             <button class="sort__button sort__button--active" type="button" aria-label="Отсортировать товары по цене">По
               цене</button>
@@ -268,6 +243,7 @@
             <button class="sort__button" type="button" aria-label="Отсортировать товары по функционалу">По
               функционалу</button>
           </div>
+
           <div class="sort__order-buttons">
             <button class="sort__order-sort-button sort__order-sort-button--active" type="button"
               aria-label="Выбрать сортировку по возрастанию">
@@ -280,6 +256,7 @@
                 <path d="M5.66 0l5.5 10h-11" /></svg>
             </button>
           </div>
+
         </div>
 
         <div class="catalog__content-wrap">
@@ -301,10 +278,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">25500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -323,10 +300,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">25500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -345,10 +322,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">25500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -369,10 +346,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">15500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -391,10 +368,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">25500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -411,10 +388,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">12500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -435,10 +412,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">15500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -457,10 +434,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main">25500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -477,10 +454,10 @@
             <span class="visually-hidden">Текущая цена</span>
             <span class="product-item__price product-item__price-main" aria-label="Текущая цена">12500 р.</span>
             <div class="product-item__actions-wrap">
-              <button class="product-item__actions-button product-item__actions-button-buy" type="button"
-                aria-label="Добавить перфоратор в корзину">Купить</button>
-              <button class="product-item__actions-button product-item__actions-button-bookmarks" type="button"
-                aria-label="Добавить перфоратор в закладки">В закладки</button>
+              <a class="product-item__actions-button product-item__actions-button-buy" href="#"
+                aria-label="Добавить перфоратор в корзину">Купить</a>
+              <a class="product-item__actions-button product-item__actions-button-bookmarks" href="#"
+                aria-label="Добавить перфоратор в закладки">В закладки</a>
             </div>
           </article>
 
@@ -488,7 +465,7 @@
 
           <ul class="catalog__pagination">
             <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link catalog__pagination-link--active" href="#">1</a>
+              <a class="catalog__pagination-link catalog__pagination-link--active">1</a>
             </li>
             <li class="catalog__pagination-item">
               <a class="catalog__pagination-link" href="#">2</a>
@@ -508,8 +485,11 @@
     </div>
 
     <section class="perforators page-catalog__perforators perforators--bg">
+
       <div class="container">
+
         <h2 class="section-title perforators__title">Пара слов о перфораторах</h2>
+
         <p class="perforators__text">
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
           кирпиче, бетоне и камне.
@@ -523,8 +503,11 @@
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
           ударная дрель.
         </p>
+
       </div>
+
     </section>
+
   </main>
 
   <footer class="footer">
@@ -541,7 +524,6 @@
                 width="108" height="18">
             </a>
           </div>
-
           <ul class="footer__nav-top">
             <li class="footer__nav-item">
               <a class="footer__top-link" href="#">Компания</a>
@@ -578,7 +560,6 @@
               <a class="footer__bottom-link" href="#">Спецпредложения</a>
             </li>
           </ul>
-
           <address class="footer__address">
             <span class="visually-hidden">Адрес магазина:</span>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -599,11 +580,11 @@
       <div class="container">
 
         <div class="footer__bottom-wrap">
-
           <p class="copyright">
             © 2010–2019 Компания «Техномарт»
             Все права защищены
           </p>
+
           <ul class="footer__social-list" aria-label="Социальные сети">
             <li>
               <a class="footer__social-button" href="#">
@@ -636,8 +617,8 @@
                 </svg>
               </a>
             </li>
-
           </ul>
+
           <p class="footer__email">
             Обратная связь:
             <a class="footer__feedback-link" href="mailto:mail@htmlacademy.ru"
@@ -660,16 +641,22 @@
     </div>
 
   </footer>
+
   <section class="modal modal-buy">
+
     <h2 class="modal-buy__title">Товар добавлен в корзину!</h2>
+
     <div class="modal__submit-wrap">
       <a class="main-buttons modal-buy__order-link" href="#">Оформить заказ</a>
       <button class="main-buttons modal-buy__shop-link" type="button">Продолжить покупки</button>
     </div>
+
     <button class="modal__close" type="button" aria-label="Закрыть"></button>
+
   </section>
 
   <script src="js/modal-buy.js"></script>
+
 </body>
 
 </html>
