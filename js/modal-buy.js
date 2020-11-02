@@ -35,7 +35,7 @@ buyCloseShopLink.addEventListener('click', function (evt) {
   currentBuyLink.focus();
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (buyPopup.classList.contains('modal--active')) {
       evt.preventDefault();

@@ -13,8 +13,8 @@ const focusableContentLost = lostPopup.querySelectorAll(focusableElementsLost);
 const lastFocusableElementLost = focusableContentLost[focusableContentLost.length - 1]; // get last element to be focused inside modal
 
 let isStorageSupport = true;
-let fullname = "";
-let email = "";
+let fullname = '';
+let email = '';
 
 try {
   fullname = localStorage.getItem('fullname');
@@ -65,7 +65,7 @@ lostForm.addEventListener('submit', function (evt) {
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (lostPopup.classList.contains('modal--active')) {
       evt.preventDefault();

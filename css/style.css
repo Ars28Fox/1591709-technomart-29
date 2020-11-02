@@ -122,14 +122,11 @@ img {
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect (0 0 0 0);
+  border: 0;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
 }
 
@@ -205,7 +202,7 @@ img {
 }
 
 .logo__link--big {
-  min-height: 68px;
+  min-height: 67px;
 }
 
 .logo__img--big {
@@ -219,16 +216,17 @@ img {
 */
 
 .search-form {
-  width: 100%;
-  max-width: 270px;
   position: relative;
+  flex-grow: 1;
 }
 
 .search-form__input {
+  font-size: 18px;
+  line-height: 24px;
   width: 100%;
   background-color: transparent;
   border: none;
-  padding: 11px 15px 11px 42px;
+  padding: 10px 15px 8px 42px;
 }
 
 .search-form__input:focus {
@@ -248,10 +246,10 @@ img {
   color: var(--basic-white);
 }
 
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {
+.search-form__input::-webkit-search-results-decoration,
+.search-form__input::-webkit-search-results-button,
+.search-form__input::-webkit-search-cancel-button,
+.search-form__input::-webkit-search-decoration {
   display: none;
 }
 
@@ -283,6 +281,7 @@ input::-webkit-search-results-decoration {
   color: var(--basic-white);
   padding: 9px 17.5px 9px 18px;
   position: relative;
+  display: block;
 }
 
 /* Header top links - закладки и корзина */
@@ -291,11 +290,17 @@ input::-webkit-search-results-decoration {
   padding-left: 43px;
 }
 
+.header__top-bookmarks--full {
+  max-width: 164px;
+}
+
 .header__top-cart {
   padding-left: 49px;
 }
 
 .header__top-cart--full {
+  max-width: 136px;
+  padding-left: 35px;
   background-color: var(--basic-red);
 }
 
@@ -326,6 +331,10 @@ input::-webkit-search-results-decoration {
   left: 26px;
   top: 11px;
   opacity: 0.3;
+}
+
+.header__top-cart--full::before {
+  left: 12px;
 }
 
 .header__top-bookmarks:hover::before,
@@ -386,7 +395,7 @@ input::-webkit-search-results-decoration {
   max-width: 200px;
   color: var(--basic-red);
   font-size: 16px;
-  line-height: 24px;
+  line-height: 23px;
   font-style: italic;
   font-weight: 400;
   margin: 0;
@@ -978,8 +987,8 @@ input::-webkit-search-results-decoration {
 .section-title {
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -1px;
   margin: 0;
 }
 
@@ -1363,10 +1372,10 @@ Services
   font-family: var(--add-font);
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
-  letter-spacing: -1px;
 }
 
 .tab__item-text {
@@ -1948,6 +1957,10 @@ Modal
   margin-right: 10px;
 }
 
+.modal-buy__order-link:focus {
+  background-color: var(--basic-red);
+}
+
 .modal-buy__shop-link {
   width: 100%;
   max-width: 192px;
@@ -2067,7 +2080,7 @@ Catalog
 
 .filter__item:last-of-type {
   border: none;
-  margin-bottom: 10px;
+  padding: 0;
 }
 
 .filter__item-title {
@@ -2144,16 +2157,22 @@ Catalog
 .range__price-input::-webkit-outer-spin-button,
 .range__price-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 .range__price-input {
+  -webkit-appearance: textfield;
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .range__price-input:hover,
 .range__price-input:focus {
+  -webkit-appearance: number-input;
   -moz-appearance: number-input;
+  appearance: number-input;
 }
 
 .range__price-dash {
@@ -2213,7 +2232,7 @@ Catalog
   outline-offset: 4px;
 }
 
-.checkbox__input:checked + .checkbox:before {
+.checkbox__input:checked+.checkbox:before {
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-on.svg);
@@ -2221,8 +2240,8 @@ Catalog
   border: none;
 }
 
-.checkbox__input:checked + .checkbox:hover::before,
-.checkbox__input:focus:checked + .checkbox::before {
+.checkbox__input:checked+.checkbox:hover::before,
+.checkbox__input:focus:checked+.checkbox::before {
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-on-hover.svg);
@@ -2230,18 +2249,18 @@ Catalog
   border: none;
 }
 
-.checkbox__input:disabled + .checkbox,
-.radio__input:disabled+ .radio {
+.checkbox__input:disabled+.checkbox,
+.radio__input:disabled+.radio {
   opacity: 0.4;
 }
 
-.checkbox__input:disabled + .checkbox::before,
-.radio__input:disabled + .radio::before {
+.checkbox__input:disabled+.checkbox::before,
+.radio__input:disabled+.radio::before {
   border-color: var(--special-chexbox-border-hover);
   opacity: 0.3;
 }
 
-.checkbox__input:checked:disabled + .checkbox:before {
+.checkbox__input:checked:disabled+.checkbox:before {
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-on-hover.svg);
@@ -2278,7 +2297,7 @@ Catalog
   cursor: pointer;
 }
 
-.radio__input:checked + .radio:before {
+.radio__input:checked+.radio:before {
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-on.svg);
@@ -2286,8 +2305,8 @@ Catalog
   border: none;
 }
 
-.radio__input:checked + .radio:hover::before,
-.radio__input:focus:checked + .radio::before {
+.radio__input:checked+.radio:hover::before,
+.radio__input:focus:checked+.radio::before {
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-on-hover.svg);
@@ -2295,7 +2314,7 @@ Catalog
   border: none;
 }
 
-.radio__input:checked:disabled + .radio:before {
+.radio__input:checked:disabled+.radio:before {
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-on-hover.svg);
@@ -2338,7 +2357,7 @@ Catalog
   background-color: var(--special-catalog-sort-color);
   border-radius: 2px;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 16px;
   padding: 10px 0 0px;
   display: flex;
   justify-content: flex-start;
@@ -2367,7 +2386,7 @@ Catalog
   border: none;
   border-bottom: 1px dotted var(--basic-red);
   text-transform: uppercase;
-  margin: 2px 0 11px;
+  margin-bottom: 11px;
   padding: 0;
   outline-offset: 3px;
   cursor: pointer;
@@ -2396,6 +2415,7 @@ Catalog
 }
 
 .sort__order-buttons {
+  line-height: 18px;
   margin-left: 43px;
   margin-right: 15px;
   padding: 0;
@@ -2412,6 +2432,7 @@ Catalog
   outline-offset: 3px;
   cursor: pointer;
 }
+
 .sort__order-sort-button--active .sort__order-icon {
   fill: var(--basic-red);
 }
@@ -2448,9 +2469,9 @@ Catalog
 /*Catalog page numbers */
 
 .catalog__pagination {
-  grid-column: 1 / 3;
+  grid-column: 2 / 5;
   list-style: none;
-  margin: 30px 0 0;
+  margin: 28px 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -2514,7 +2535,6 @@ Catalog
 .perforators__title {
   font-family: var(--add-font);
   margin-bottom: 25px;
-  letter-spacing: -0.6px;
 }
 
 .perforators__text {

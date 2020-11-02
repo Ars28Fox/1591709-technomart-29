@@ -21,7 +21,7 @@ mapClose.addEventListener('click', function (evt) {
   mapLink.focus();
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (mapPopup.classList.contains('modal--active')) {
       mapPopup.classList.remove('modal--active');
