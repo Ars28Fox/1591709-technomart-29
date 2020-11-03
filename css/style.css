@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <=11
+*/
+
 :root {
 
   /* Основные шрифты */
@@ -116,6 +123,7 @@ img {
   margin: 0;
   padding: 0;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -1759,11 +1767,31 @@ Modal
 
 .modal--active {
   display: block;
-  animation: bounce .6s;
+  -webkit-animation: bounce .6s;
+          animation: bounce .6s;
 }
 
 .modal--error {
-  animation: shake .6s;
+  -webkit-animation: shake .6s;
+          animation: shake .6s;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  70% {
+    top: 52%;
+  }
+
+  90% {
+    top: 48%;
+  }
+
+  100% {
+    top: 50%;
+  }
 }
 
 @keyframes bounce {
@@ -1781,6 +1809,29 @@ Modal
 
   100% {
     top: 50%;
+  }
+}
+
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    left: 50%;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    left: 49.5%;
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    left: 50.5%;
   }
 }
 
@@ -1817,7 +1868,8 @@ Modal
   margin: 40px 80px 37px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 14px;
 }
 
@@ -1990,6 +2042,7 @@ Catalog
 .catalog {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: -webkit-min-content -webkit-min-content 1fr;
   grid-template-rows: min-content min-content 1fr;
   gap: 20px;
 }
@@ -2460,7 +2513,8 @@ Catalog
   grid-column: 2 / 5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 18px;
   margin-top: 8px;
 }
