@@ -1,5 +1,7 @@
 # Учебный проект «Техномарт»
 
+[Project page](https://ars28fox.github.io/1591709-technomart-29/)
+
 Написан на чистом html, css и javascript.
 
 В ходе учебного проекта было реализовано:
